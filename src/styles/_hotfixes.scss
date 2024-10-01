@@ -1,0 +1,11 @@
+
+.medium-zoom-overlay {
+  z-index: 1;
+  backdrop-filter: blur(4px);
+}
+.medium-zoom-image--opened {
+  z-index: 2;
+}
+.cdk-overlay-dark-backdrop {
+  backdrop-filter: blur(4px);
+}

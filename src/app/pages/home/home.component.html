@@ -1,0 +1,57 @@
+<main class="page">
+  <div class="container">
+    <h1>Boilerplate Web Angular</h1>
+
+    <h2>PrimeNG</h2>
+    <div class="flex gap-2 flex-column sm:flex-row">
+      <a
+        pButton
+        href="https://primeng.org/autocomplete"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Componentes
+      </a>
+
+      <a
+        pButton
+        href="https://blocks.primeng.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Blocos de código
+      </a>
+
+      <a
+        pButton
+        href="https://primeflex.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Utilitário CSS
+      </a>
+    </div>
+
+    <h2 class="mt-6">Roadmap </h2>
+    @for (item of items; track item.title; let idx = $index) {
+      <div
+        class="mb-3 flex align-items-center border-1 border-200 border-round"
+      >
+        <div class="p-3">
+          <p-checkbox
+            inputId="check-{{ idx }}"
+            binary
+            [formControl]="checkedItems.at(idx)"
+          />
+        </div>
+        <div class="p-1">
+          <label for="check-{{ idx }}">
+            <strong>{{ item.title }}</strong> <br />
+            <span [innerHTML]="item.description"></span>
+          </label>
+        </div>
+      </div>
+    }
+    <button pButton (click)="resetRoadmap()"> Redefinir </button>
+  </div>
+</main>

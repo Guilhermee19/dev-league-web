@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'styles/layers';
+
+@import 'styles/animations';
+@import 'styles/button';
+@import 'styles/dialog';
+@import 'styles/hotfixes';
+@import 'styles/input';
+@import 'styles/media';
+@import 'styles/page';
+@import 'styles/scroll';
+@import 'styles/table';
+@import 'styles/variables';
+@import 'styles/fw2svg';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: var(--primary-bg);
+}

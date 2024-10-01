@@ -1,0 +1,64 @@
+<p-menubar [model]="items" class="sticky z-1 top-0">
+  <ng-template pTemplate="start">
+    <figure class="h-3rem m-0 mr-3">
+      <img src="../../../assets/images/logo.png" alt="Logo" class="h-full" />
+    </figure>
+  </ng-template>
+  <ng-template pTemplate="item" let-item let-root="root">
+    <a
+      pRipple
+      class="flex align-items-center p-menuitem-link"
+      [routerLink]="item.routerLink"
+    >
+      <i [icon]="item.icon"></i>
+      <span class="ml-2">{{ item.label }}</span>
+      @if (item.badge) {
+        <p-badge
+          [ngClass]="{ 'ml-auto': !root, 'ml-2': root }"
+          [value]="item.badge"
+        />
+      }
+      @if (item.shortcut) {
+        <span
+          class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1"
+          >{{ item.shortcut }}</span
+        >
+      }
+      @if (item.items) {
+        <i
+          [icon]="root ? 'angle_down' : 'angle_right'"
+          [ngClass]="[root ? 'ml-2' : 'ml-auto']"
+        ></i>
+      }
+    </a>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <div class="flex align-items-center gap-2">
+      <input
+        type="text"
+        pInputText
+        placeholder="Search"
+        class="w-8rem sm:w-auto"
+      />
+      <p-avatar
+        image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+        shape="circle"
+      />
+    </div>
+  </ng-template>
+</p-menubar>
+
+@if (!loading && !error) {
+  <div [@routeAnimations]="outlet && outlet.activatedRouteData">
+    <router-outlet #outlet="outlet" />
+  </div>
+}
+@if (error) {
+  <!-- TODO: Implementar componente de página de erro -->
+  <!-- <page-error [code]="error" /> -->
+}
+
+@if (loading) {
+  <!-- TODO: Implementar componente de carregamento da página -->
+  <!-- <page-loading /> -->
+}
