@@ -12,7 +12,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { zoomInAnimation } from '@app/animations/route-animation';
 import { ForgotPasswordComponent } from '@app/components/modals/forgot-password/forgot-password.component';
 import { IconDirective } from '@app/directives/icon.directive';
@@ -46,6 +46,7 @@ import { RippleModule } from 'primeng/ripple';
     ReactiveFormsModule,
     PasswordModule,
     ConfirmDialogModule,
+    RouterModule,
   ],
   templateUrl: './login.component.html',
   animations: [zoomInAnimation],
