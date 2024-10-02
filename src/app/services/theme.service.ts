@@ -1,0 +1,57 @@
+import { DOCUMENT } from '@angular/common';
+import { inject, Injectable, signal } from '@angular/core';
+
+export type Themes = 'light' | 'dark';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ThemeService {
+  private userTheme = signal<Themes>('light');
+  private document = inject(DOCUMENT);
+
+  public get theme() {
+    return this.userTheme();
+  }
+
+  public toggleUserTheme() {}
+
+  public loadCurrentTheme(theme?: Themes) {
+    if (theme) {
+      this.setTheme(theme);
+      return;
+    }
+
+    const inLocal = localStorage.getItem('theme') as Themes;
+    if (inLocal) {
+      this.userTheme.set(inLocal);
+      this.setTheme(inLocal);
+      return inLocal;
+    }
+
+    const deviceMode = window.matchMedia('(prefers-color-scheme: dark)');
+    if (deviceMode.matches) {
+      this.setTheme('dark');
+      return 'dark';
+    }
+    this.setTheme('light');
+    return 'light';
+  }
+
+  private setTheme(theme: Themes) {
+    this.userTheme.set(theme);
+    localStorage.setItem('theme', theme);
+    const html = document.querySelector('html');
+    const linkElement = this.document.getElementById(
+      'app-theme'
+    ) as HTMLLinkElement;
+    linkElement.href = `${theme}.css`;
+
+    if (theme === 'light') {
+      html?.classList.remove('dark');
+      return;
+    }
+
+    html?.classList.add('dark');
+  }
+}

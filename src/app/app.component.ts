@@ -1,8 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { afterNextRender, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { environment } from '../environments/environment.development';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { environment } from '../environments/environment.development';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  private theme = inject(ThemeService);
   private translate = inject(TranslateService);
   private config = inject(PrimeNGConfig);
 
@@ -24,5 +26,9 @@ export class AppComponent {
     this.translate
       .get('primeng')
       .subscribe((res) => this.config.setTranslation(res));
+
+    afterNextRender(() => {
+      this.theme.loadCurrentTheme();
+    });
   }
 }

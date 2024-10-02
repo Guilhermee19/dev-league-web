@@ -94,10 +94,10 @@ export class HomeComponent {
     {
       title: 'Personalização: Alteração de cores de tema do PrimeNG',
       description:
-        'Vá em <code>src/palette.scss</code> e altere as cores. Os links comentados são para te facilitar em como escolher as cores. Caso não tenha um "accent", duplique os valores do "primary".',
-    }, // TODO: Esplicar como escolher as cores
+        'Além do tema, você também pode expecificar as cores. O PrimeNG trabalha com o :root, então você só deve sobrescrever as variáveis. Você pode coloca-las no arquivo <code>src/styles/_variables.scss</code>. Você pode encontrar as variáveis em <a href="https://primeng.org/colors">PrimeNG Colors</a>.',
+    },
     {
-      title: 'Personalização: Escolha o tema',
+      title: 'Personalização: Escolha o modo',
       description:
         'O tema já se adequa automaticamente, mas caso queira forçar sempre escuro ou sempre claro, expecifique os valores "dark" ou "light" no arquivo <code>src/app/app.component.ts</code> dentro do método loadCurrentTheme.',
     },
