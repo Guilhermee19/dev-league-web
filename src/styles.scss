@@ -1,4 +1,4 @@
-@import 'styles/layers';
+@import 'primeicons/primeicons.css';
 
 @import 'styles/animations';
 @import 'styles/button';
@@ -12,11 +12,6 @@
 @import 'styles/variables';
 @import 'styles/fw2svg';
 
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  background-color: var(--primary-bg);
-}
+@layer reset, primeng;
+
+@import 'styles/_reset.scss' layer(reset);

@@ -1,1 +1,28 @@
-{}
+{
+  "global": {
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "success": "Sucesso",
+    "error": "Erro"
+  },
+  "login": {
+    "title": "Bem-vindo de volta",
+    "dont-have-account": "Não tem uma conta?",
+    "create-now": "Crie agora!",
+    "email": "E-mail",
+    "password": "Senha",
+    "remember-me": "Lembrar-me",
+    "forgot-password": "Esqueceu a senha?",
+    "sign-in": "Entrar",
+    "or": "ou",
+    "with-google": "Entrar com Google",
+    "cookies": {
+      "header": "Permitir cookies?",
+      "message": "Utilizamos cookies e outras ferramentas similares para aprimorar a sua navegação. Para manter-se logado, permita o uso de deles."
+    },
+    "forgot": {
+      "header": "Recuperar senha",
+      "success": "E-mail de recuperação enviado com sucesso!"
+    }
+  }
+}

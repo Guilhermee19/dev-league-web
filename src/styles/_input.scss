@@ -1,5 +1,18 @@
+@import 'animations';
+
 form {
   .buttons {
     margin-top: 1rem;
+  }
+
+  .ng-invalid {
+    &.ng-dirty,
+    &.ng-touched {
+      .p-inputtext,
+      &.p-inputtext {
+        border-color: #fca5a5;
+        @include shake;
+      }
+    }
   }
 }

@@ -1,19 +1,19 @@
-import { afterNextRender, Component, inject } from '@angular/core';
+import { afterNextRender, Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import primePtBr from 'primelocale/pt-br.json';
 import { PrimeNGConfig } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
 import { environment } from '../environments/environment.development';
 import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ToastModule],
   templateUrl: './app.component.html',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   private theme = inject(ThemeService);
-  private translate = inject(TranslateService);
   private config = inject(PrimeNGConfig);
 
   public constructor() {
@@ -23,12 +23,12 @@ export class AppComponent {
 
     this.config.ripple = true;
 
-    this.translate
-      .get('primeng')
-      .subscribe((res) => this.config.setTranslation(res));
-
     afterNextRender(() => {
       this.theme.loadCurrentTheme();
     });
+  }
+
+  public ngOnInit() {
+    this.config.setTranslation(primePtBr['pt-br']);
   }
 }

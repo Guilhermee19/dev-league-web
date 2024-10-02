@@ -21,6 +21,7 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
+    "resolveJsonModule": true,
     "paths": {
       "@app/*": ["src/app/*"],
       "@animations/*": ["src/app/animations/*"],

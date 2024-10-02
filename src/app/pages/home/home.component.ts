@@ -32,7 +32,6 @@ export class HomeComponent {
     );
 
     this.checkedItems.valueChanges.subscribe((values) => {
-      console.log(values);
       localStorage.setItem('checkedItems', JSON.stringify(values));
     });
   }
