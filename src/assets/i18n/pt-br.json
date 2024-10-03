@@ -55,5 +55,11 @@
       "cnpj": "CNPJ inválido",
       "diff_password": "As senhas não conferem"
     }
+  },
+  "rescure_password": {
+    "title": "Recuperar senha",
+    "success": "Senha recuperada",
+    "success_detail": "Agora você pode fazer login",
+    "change_password": "Alterar senha"
   }
 }
