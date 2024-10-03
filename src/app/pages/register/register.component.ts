@@ -18,8 +18,8 @@ import { IconDirective } from '@app/directives/icon.directive';
 import { FormErrorPipe } from '@app/pipes/form-error.pipe';
 import { AuthService } from '@app/services/auth.service';
 import { BodyJson } from '@app/services/http.service';
-import { TranslateModule } from '@ngx-translate/core';
-import { ConfirmationService } from 'primeng/api';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { DividerModule } from 'primeng/divider';
 import { DialogService } from 'primeng/dynamicdialog';
@@ -51,9 +51,11 @@ import { RippleModule } from 'primeng/ripple';
 })
 export class RegisterComponent {
   private fb = inject(FormBuilder);
-  public loading = signal(false);
   private authService = inject(AuthService);
   private router = inject(Router);
+  private messageService = inject(MessageService);
+  private translate = inject(TranslateService);
+  public loading = signal(false);
 
   public form = this.fb.group({
     name: ['', [Validators.required]],
@@ -71,11 +73,17 @@ export class RegisterComponent {
     this.loading.set(true);
 
     const body = this.form.value as BodyJson;
-    this.authService.login(body).subscribe({
-      next: (response) => {
+    this.authService.register(body).subscribe({
+      next: () => {
+        const summary = this.translate.instant('register.success');
+        const detail = this.translate.instant('register.success_detail');
         this.loading.set(false);
-        this.authService.setToken(response.token, body['remember'] as boolean);
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
+        this.messageService.add({
+          severity: 'success',
+          summary,
+          detail,
+        });
       },
       error: () => {
         this.loading.set(false);
