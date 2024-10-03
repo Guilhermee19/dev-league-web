@@ -16,6 +16,7 @@ import { Router, RouterModule } from '@angular/router';
 import { zoomInAnimation } from '@app/animations/route-animation';
 import { ForgotPasswordComponent } from '@app/components/modals/forgot-password/forgot-password.component';
 import { IconDirective } from '@app/directives/icon.directive';
+import { FormErrorPipe } from '@app/pipes/form-error.pipe';
 import { AuthService } from '@app/services/auth.service';
 import { BodyJson } from '@app/services/http.service';
 import { StorageService } from '@app/services/storage.service';
@@ -47,6 +48,7 @@ import { RippleModule } from 'primeng/ripple';
     PasswordModule,
     ConfirmDialogModule,
     RouterModule,
+    FormErrorPipe,
   ],
   templateUrl: './login.component.html',
   animations: [zoomInAnimation],

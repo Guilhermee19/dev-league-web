@@ -24,5 +24,34 @@
       "header": "Recuperar senha",
       "success": "E-mail de recuperação enviado com sucesso!"
     }
+  },
+  "register": {
+    "title": "Crie sua conta",
+    "already-have-account": "Já tem uma conta?",
+    "sign-in": "Entrar",
+    "name": "Nome",
+    "email": "E-mail",
+    "password": "Senha",
+    "confirm-password": "Confirme a senha",
+    "register": "Registrar",
+    "or": "ou",
+    "with-google": "Registrar com Google"
+  },
+  "errors": {
+    "error": "Erro",
+    "500": "Erro interno em nossos servidores",
+    "404": "Está pagina que está tentando acessar não existe, foi removida ou está temporariamente indisponível",
+    "403": "Você não tem permissão para acessar esta pagina",
+    "401": "Você não está autenticado",
+    "400": "Seu pedido não pode ser processado",
+    "default": "Um erro inesperado aconteceu",
+    "form": {
+      "required": "Campo obrigatório",
+      "email": "E-mail inválido",
+      "mask": "Valor inválido",
+      "cpf": "CPF inválido",
+      "cnpj": "CNPJ inválido",
+      "diff_password": "As senhas não conferem"
+    }
   }
 }

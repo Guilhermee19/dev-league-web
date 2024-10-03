@@ -5,6 +5,24 @@ form {
     margin-top: 1rem;
   }
 
+  [formcontrolname] {
+    & + .p-error {
+      height: 0;
+      transition: var(--ts);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+    }
+
+    &.ng-touched.ng-invalid,
+    &.ng-dirty.ng-invalid {
+      & + .p-error {
+        height: 15px;
+      }
+    }
+  }
+
   .ng-invalid {
     &.ng-dirty,
     &.ng-touched {
