@@ -1,9 +1,10 @@
-import { afterNextRender, Component, inject, OnInit } from '@angular/core';
+import { afterNextRender, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import primePtBr from 'primelocale/pt-br.json';
 import { PrimeNGConfig } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { environment } from '../environments/environment.development';
+import { LanguageService } from './services/language.service';
 import { ThemeService } from './services/theme.service';
 
 @Component({
@@ -12,8 +13,9 @@ import { ThemeService } from './services/theme.service';
   imports: [RouterOutlet, ToastModule],
   templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   private theme = inject(ThemeService);
+  private language = inject(LanguageService);
   private config = inject(PrimeNGConfig);
 
   public constructor() {
@@ -22,13 +24,11 @@ export class AppComponent implements OnInit {
     );
 
     this.config.ripple = true;
+    this.config.setTranslation(primePtBr['pt-br']);
 
     afterNextRender(() => {
       this.theme.loadCurrentTheme();
+      this.language.use(this.language.current);
     });
-  }
-
-  public ngOnInit() {
-    this.config.setTranslation(primePtBr['pt-br']);
   }
 }

@@ -1,0 +1,74 @@
+{
+  "global": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "success": "Success",
+    "error": "Error"
+  },
+  "navbar": {
+    "home": "Home",
+    "login": "Sign In",
+    "help": "Help"
+  },
+  "languages": {
+    "pt-br": "Portuguese",
+    "en": "English"
+  },
+  "login": {
+    "title": "Welcome back",
+    "dont-have-account": "Don't have an account?",
+    "create-now": "Create one now!",
+    "email": "Email",
+    "password": "Password",
+    "remember-me": "Remember me",
+    "forgot-password": "Forgot your password?",
+    "sign-in": "Sign In",
+    "or": "or",
+    "with-google": "Sign in with Google",
+    "cookies": {
+      "header": "Allow cookies?",
+      "message": "We use cookies and similar tools to enhance your browsing experience. To stay logged in, please allow their use."
+    },
+    "forgot": {
+      "header": "Recover password",
+      "success": "Recovery email sent successfully!"
+    }
+  },
+  "register": {
+    "title": "Create your account",
+    "already-have-account": "Already have an account?",
+    "sign-in": "Sign In",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "confirm-password": "Confirm password",
+    "register": "Register",
+    "or": "or",
+    "with-google": "Sign up with Google",
+    "success": "Registration successful",
+    "success_detail": "You can now sign in"
+  },
+  "errors": {
+    "400": "Your request could not be processed",
+    "401": "You are not authenticated",
+    "403": "You do not have permission to access this page",
+    "404": "The page you are trying to access does not exist, has been removed, or is temporarily unavailable",
+    "500": "Internal server error",
+    "error": "Error",
+    "default": "An unexpected error has occurred",
+    "form": {
+      "required": "This field is required",
+      "email": "Invalid email",
+      "mask": "Invalid value",
+      "cpf": "Invalid CPF",
+      "cnpj": "Invalid CNPJ",
+      "diff_password": "Passwords do not match"
+    }
+  },
+  "rescue_password": {
+    "title": "Recover password",
+    "success": "Password recovered",
+    "success_detail": "You can now sign in",
+    "change_password": "Change password"
+  }
+}
