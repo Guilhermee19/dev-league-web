@@ -32,7 +32,6 @@ export class LangSelectComponent implements OnInit {
 
   public selectLang(lang: string | null) {
     if (!lang) return;
-    console.log('Selected lang:', lang);
     this.language.use(lang);
   }
 }
