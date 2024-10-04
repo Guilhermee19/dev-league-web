@@ -5,6 +5,11 @@
     "success": "Sucesso",
     "error": "Erro"
   },
+  "navbar": {
+    "home": "Início",
+    "login": "Entrar",
+    "help": "Ajuda"
+  },
   "login": {
     "title": "Bem-vindo de volta",
     "dont-have-account": "Não tem uma conta?",

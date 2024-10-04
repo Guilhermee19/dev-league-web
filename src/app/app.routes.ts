@@ -35,6 +35,14 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/home/home.component').then((m) => m.HomeComponent),
       },
+      {
+        path: '**',
+        loadComponent: () =>
+          import('./components/shared/page-error/page-error.component').then(
+            (m) => m.PageErrorComponent
+          ),
+        data: { code: 404 },
+      },
     ],
   },
 ];
