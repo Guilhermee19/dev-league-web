@@ -10,6 +10,10 @@
     "login": "Entrar",
     "help": "Ajuda"
   },
+  "languages": {
+    "pt-br": "Português",
+    "en": "Inglês"
+  },
   "login": {
     "title": "Bem-vindo de volta",
     "dont-have-account": "Não tem uma conta?",

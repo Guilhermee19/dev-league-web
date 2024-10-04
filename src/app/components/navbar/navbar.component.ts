@@ -12,6 +12,9 @@ import { BadgeModule } from 'primeng/badge';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
 import { RippleModule } from 'primeng/ripple';
+import { LangSelectComponent } from '../shared/lang-select/lang-select.component';
+import { PageErrorComponent } from '../shared/page-error/page-error.component';
+import { PageLoadingComponent } from '../shared/page-loading/page-loading.component';
 
 @Component({
   selector: 'app-navbar',
@@ -25,6 +28,9 @@ import { RippleModule } from 'primeng/ripple';
     CommonModule,
     RouterOutlet,
     IconDirective,
+    LangSelectComponent,
+    PageLoadingComponent,
+    PageErrorComponent,
   ],
   templateUrl: './navbar.component.html',
   animations: [slideInAnimation, offcanvasTopAnimation],
