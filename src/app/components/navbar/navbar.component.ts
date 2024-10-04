@@ -15,6 +15,7 @@ import { RippleModule } from 'primeng/ripple';
 import { LangSelectComponent } from '../shared/lang-select/lang-select.component';
 import { PageErrorComponent } from '../shared/page-error/page-error.component';
 import { PageLoadingComponent } from '../shared/page-loading/page-loading.component';
+import { ToggleThemeComponent } from '../shared/toggle-theme/toggle-theme.component';
 
 @Component({
   selector: 'app-navbar',
@@ -31,6 +32,7 @@ import { PageLoadingComponent } from '../shared/page-loading/page-loading.compon
     LangSelectComponent,
     PageLoadingComponent,
     PageErrorComponent,
+    ToggleThemeComponent,
   ],
   templateUrl: './navbar.component.html',
   animations: [slideInAnimation, offcanvasTopAnimation],

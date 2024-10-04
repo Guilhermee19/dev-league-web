@@ -1,0 +1,11 @@
+<button
+  aria-label="Trocar tema"
+  icon="pi"
+  pButton
+  pRipple
+  [rounded]="true"
+  [text]="true"
+  (click)="toggleTheme($event)"
+>
+  <div class="toggle" [ngClass]="{ light: !darkThemeControl.value }"></div>
+</button>

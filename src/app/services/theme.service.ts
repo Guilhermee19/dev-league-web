@@ -14,7 +14,11 @@ export class ThemeService {
     return this.userTheme();
   }
 
-  public toggleUserTheme() {}
+  public toggleUserTheme() {
+    const theme = this.theme === 'light' ? 'dark' : 'light';
+    this.setTheme(theme);
+    return theme;
+  }
 
   public loadCurrentTheme(theme?: Themes) {
     if (theme) {
