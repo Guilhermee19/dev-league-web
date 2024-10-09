@@ -1,3 +1,4 @@
+@import 'primeng/resources/primeng.css';
 @import 'primeicons/primeicons.css';
 
 @import 'styles/animations';
@@ -12,6 +13,22 @@
 @import 'styles/variables';
 @import 'styles/fw2svg';
 
-@layer reset, primeng;
+@layer tailwind-base, primeng, tailwind-utilities;
+@layer tailwind-base {
+  @tailwind base;
+}
+@layer primeng;
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
 
-@import 'styles/_reset.scss' layer(reset);
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

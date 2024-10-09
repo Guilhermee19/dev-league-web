@@ -1,6 +1,6 @@
-<p-menubar [model]="items" class="sticky z-1 top-0">
+<p-menubar [model]="items" class="sticky z-10 top-0">
   <ng-template pTemplate="start">
-    <figure class="h-3rem m-0 mr-3">
+    <figure class="h-12 m-0 mr-3">
       <img src="../../../assets/images/logo.png" alt="Logo" class="h-full" />
     </figure>
   </ng-template>
@@ -33,14 +33,14 @@
     </a>
   </ng-template>
   <ng-template pTemplate="end">
-    <div class="flex align-items-center gap-2">
+    <div class="flex items-center gap-2">
       <toggle-theme />
       <app-lang-select />
       <input
         type="text"
         pInputText
         placeholder="Search"
-        class="w-8rem sm:w-auto"
+        class="w-32 sm:w-auto"
       />
       <p-avatar
         routerLink="/login"

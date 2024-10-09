@@ -27,7 +27,8 @@
     ".sequelizerc": "javascript",
     ".stylelintrc": "json",
     ".prettierrc": "json",
-    ".hintrc": "json"
+    ".hintrc": "json",
+    "*.scss": "postcss"
   },
   "editor.tabSize": 2,
   "git.enableSmartCommit": true,

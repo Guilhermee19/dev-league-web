@@ -7,5 +7,7 @@
   "arrowParens": "always",
   "trailingComma": "es5",
   "printWidth": 80,
-  "htmlWhitespaceSensitivity": "strict"
+  "htmlWhitespaceSensitivity": "strict",
+  "tailwindConfig": "./tailwind.config.js",
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

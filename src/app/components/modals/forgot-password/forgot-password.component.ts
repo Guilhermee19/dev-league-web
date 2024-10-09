@@ -41,7 +41,7 @@ export class ForgotPasswordComponent {
   private translateService = inject(TranslateService);
 
   public constructor() {
-    this.dialogConfig.styleClass = 'w-full max-w-25rem';
+    this.dialogConfig.styleClass = 'w-full max-w-96';
   }
 
   public loading = signal(false);

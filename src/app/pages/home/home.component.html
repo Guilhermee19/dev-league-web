@@ -3,7 +3,7 @@
     <h1>Boilerplate Web Angular</h1>
 
     <h2>PrimeNG</h2>
-    <div class="flex gap-2 flex-column sm:flex-row">
+    <div class="flex-column flex gap-2 sm:flex-row">
       <a
         pButton
         href="https://primeng.org/autocomplete"
@@ -15,7 +15,7 @@
 
       <a
         pButton
-        href="https://blocks.primeng.org/"
+        href="https://tailwindui.com/components"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -24,7 +24,7 @@
 
       <a
         pButton
-        href="https://primeflex.org/"
+        href="https://tailwindcss.com/docs/"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -35,9 +35,9 @@
     <h2 class="mt-6">Roadmap </h2>
     @for (item of items; track item.title; let idx = $index) {
       <div
-        class="mb-3 flex align-items-center border-1 border-200 border-round"
+        class="mb-4 flex items-center rounded-lg border border-solid border-slate-500"
       >
-        <div class="p-3">
+        <div class="p-4">
           <p-checkbox
             inputId="check-{{ idx }}"
             binary

@@ -1,6 +1,6 @@
 <p-dropdown [options]="langs" [formControl]="selected" optionLabel="name">
   <ng-template pTemplate="selectedItem">
-    <div class="flex align-items-center">
+    <div class="flex items-center">
       <img
         src="assets/images/flags/{{ selected.value }}.svg"
         alt="{{ 'languages.' + selected.value | translate }}"
@@ -9,7 +9,7 @@
     </div>
   </ng-template>
   <ng-template let-lang pTemplate="item">
-    <div class="flex align-items-center gap-2">
+    <div class="flex items-center gap-2">
       <img
         src="assets/images/flags/{{ lang }}.svg"
         alt="{{ 'languages.' + lang | translate }}"
