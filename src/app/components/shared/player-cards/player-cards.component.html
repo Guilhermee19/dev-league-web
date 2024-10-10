@@ -8,16 +8,24 @@
   />
 
   <h1
-    class="absolute -right-3 -top-9 aspect-square rounded-full bg-white p-4 text-3xl text-[#f5c738]"
+    class="absolute -right-3 -top-9 aspect-square w-16 rounded-full bg-white p-4 text-center text-3xl text-[#f5c738]"
   >
     {{ player.number }}
   </h1>
 
-  <img
-    [src]="player.image"
-    alt=""
-    class="relative z-10 aspect-square w-full rounded-md"
-  />
+  @if (player.image) {
+    <img
+      [src]="player.image"
+      alt=""
+      class="relative z-10 aspect-square w-full rounded-md object-cover object-top"
+    />
+  } @else {
+    <img
+      src="https://nos.noclafgroup.com/assets/images/logo-vertical-black.png"
+      alt=""
+      class="relative z-10 aspect-square w-full rounded-md bg-white object-contain object-center p-10"
+    />
+  }
 
   <div class="relative z-10 w-full pb-4">
     <h1
@@ -33,11 +41,6 @@
     </h1>
 
     <div class="mt-2 flex items-center justify-between">
-      <p class="m-0 text-sm"> Agilidade: </p>
-      <p-rating [(ngModel)]="player.skills.agility" [cancel]="false" />
-    </div>
-
-    <div class="mt-2 flex items-center justify-between">
       <p class="m-0 text-sm"> Força: </p>
       <p-rating [(ngModel)]="player.skills.strength" [cancel]="false" />
     </div>
@@ -50,6 +53,11 @@
     <div class="mt-2 flex items-center justify-between">
       <p class="m-0 text-sm"> Abilidade: </p>
       <p-rating [(ngModel)]="player.skills.ability" [cancel]="false" />
+    </div>
+
+    <div class="mt-2 flex items-center justify-between">
+      <p class="m-0 text-sm"> Defesa: </p>
+      <p-rating [(ngModel)]="player.skills.defence" [cancel]="false" />
     </div>
   </div>
 

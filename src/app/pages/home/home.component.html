@@ -2,7 +2,7 @@
   <div class="container">
     <h1> Dev League</h1>
 
-    <section class="flex gap-4">
+    <section class="flex flex-wrap gap-4">
       @for (card of player_cards; track $index) {
         <app-player-cards [player]="card" class="max-w-72" />
       }
