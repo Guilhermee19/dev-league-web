@@ -8,9 +8,9 @@ export const PLAYERCARDS: IPlayerCard[] = [
       'https://noclaf-projects-storage.s3-sa-east-1.amazonaws.com/media/profile_image/i_am_gui.jpg',
     size: 'LOW', // LOW | MEDIUM | HIGH
     position: 'ZAGUEIRO',
-    score: 8,
+    score: 9,
     skills: {
-      strength: 2,
+      strength: 3,
       speed: 4,
       ability: 1,
       defence: 2,
@@ -21,7 +21,7 @@ export const PLAYERCARDS: IPlayerCard[] = [
     number: 22,
     image:
       'https://noclaf-projects-storage.s3-sa-east-1.amazonaws.com/media/profile_image/fa02bf77-4f56-4046-9784-08228c94f2bb.png',
-    size: 'LOW', // LOW | MEDIUM | HIGH
+    size: 'HIGH', // LOW | MEDIUM | HIGH
     position: 'MEIO-CAMPO',
     score: 8,
     skills: {
@@ -36,12 +36,12 @@ export const PLAYERCARDS: IPlayerCard[] = [
     number: 10,
     image:
       'https://noclaf-projects-storage.s3-sa-east-1.amazonaws.com/media/profile_image/3ca0329f-4d80-4e72-8659-754f85e2bdc5.png',
-    size: 'LOW', // LOW | MEDIUM | HIGH
+    size: 'MEDIUM', // LOW | MEDIUM | HIGH
     position: 'ATACANTE',
-    score: 15,
+    score: 16,
     skills: {
       strength: 4,
-      speed: 4,
+      speed: 5,
       ability: 3,
       defence: 4,
     },
@@ -50,7 +50,7 @@ export const PLAYERCARDS: IPlayerCard[] = [
     name: 'Bryan',
     number: 24,
     image: '',
-    size: 'LOW', // LOW | MEDIUM | HIGH
+    size: 'HIGH', // LOW | MEDIUM | HIGH
     position: 'GOLEIRO',
     score: 16,
     skills: {
@@ -65,7 +65,7 @@ export const PLAYERCARDS: IPlayerCard[] = [
     number: 12,
     image:
       'https://noclaf-projects-storage.s3-sa-east-1.amazonaws.com/media/profile_image/01d62458-84f9-4531-bb86-4e4c778fa6db.png',
-    size: 'LOW', // LOW | MEDIUM | HIGH
+    size: 'HIGH', // LOW | MEDIUM | HIGH
     position: 'MEIO-CAMPO',
     score: 13,
     skills: {
@@ -95,7 +95,7 @@ export const PLAYERCARDS: IPlayerCard[] = [
     number: 14,
     image:
       'https://noclaf-projects-storage.s3-sa-east-1.amazonaws.com/media/profile_image/9a6970cd-fe66-43bf-ae19-ffe3ce8a74a6.png',
-    size: 'LOW', // LOW | MEDIUM | HIGH
+    size: 'HIGH', // LOW | MEDIUM | HIGH
     position: 'MEIO-CAMPO',
     score: 14,
     skills: {
@@ -103,6 +103,21 @@ export const PLAYERCARDS: IPlayerCard[] = [
       speed: 3,
       ability: 4,
       defence: 4,
+    },
+  },
+  {
+    name: 'Rodrigo B',
+    number: 7,
+    image:
+      'https://noclaf-projects-storage.s3-sa-east-1.amazonaws.com/media/profile_image/cb0201fb-f1d6-49b7-b186-1680dd171e6b.png',
+    size: 'MEDIUM', // LOW | MEDIUM | HIGH
+    position: 'MEIO-CAMPO',
+    score: 14,
+    skills: {
+      strength: 5,
+      speed: 5,
+      ability: 5,
+      defence: 5,
     },
   },
 ];

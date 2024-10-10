@@ -1,10 +1,19 @@
 <main class="page">
   <div class="container">
-    <h1> Dev League</h1>
+    <header>
+      <h1> Dev League</h1>
+      <!-- <p-button label="Gerar Time" [loading]="loading" (onClick)="load()" /> -->
+    </header>
 
-    <section class="flex flex-wrap gap-4">
+    <section
+      class="min-h-min80 flex flex-wrap items-center justify-evenly gap-4"
+    >
       @for (card of player_cards; track $index) {
-        <app-player-cards [player]="card" class="max-w-72" />
+        <app-player-cards
+          [player]="card"
+          class="max-w-72 transition-all"
+          [ngClass]="{ 'animate-moveCenter': loading }"
+        />
       }
     </section>
   </div>

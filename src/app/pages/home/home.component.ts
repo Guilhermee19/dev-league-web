@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PlayerCardsComponent } from '@app/components/shared/player-cards/player-cards.component';
@@ -10,6 +11,7 @@ import { CheckboxModule } from 'primeng/checkbox';
   selector: 'app-home',
   standalone: true,
   imports: [
+    CommonModule,
     ButtonModule,
     CheckboxModule,
     ReactiveFormsModule,
@@ -20,4 +22,14 @@ import { CheckboxModule } from 'primeng/checkbox';
 })
 export class HomeComponent {
   public player_cards: IPlayerCard[] = PLAYERCARDS;
+
+  public loading: boolean = false;
+
+  public load() {
+    this.loading = true;
+
+    // setTimeout(() => {
+    //   this.loading = false;
+    // }, 2000);
+  }
 }
