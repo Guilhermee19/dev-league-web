@@ -18,7 +18,7 @@ export const PLAYERCARDS: IPlayerCard[] = [
   },
   {
     name: 'Kauã L',
-    number: 13,
+    number: 22,
     image:
       'https://noclaf-projects-storage.s3-sa-east-1.amazonaws.com/media/profile_image/fa02bf77-4f56-4046-9784-08228c94f2bb.png',
     size: 'LOW', // LOW | MEDIUM | HIGH
@@ -48,7 +48,7 @@ export const PLAYERCARDS: IPlayerCard[] = [
   },
   {
     name: 'Bryan',
-    number: 7,
+    number: 24,
     image: '',
     size: 'LOW', // LOW | MEDIUM | HIGH
     position: 'GOLEIRO',
@@ -62,7 +62,7 @@ export const PLAYERCARDS: IPlayerCard[] = [
   },
   {
     name: 'Rolyson',
-    number: 14,
+    number: 12,
     image:
       'https://noclaf-projects-storage.s3-sa-east-1.amazonaws.com/media/profile_image/01d62458-84f9-4531-bb86-4e4c778fa6db.png',
     size: 'LOW', // LOW | MEDIUM | HIGH
@@ -77,7 +77,7 @@ export const PLAYERCARDS: IPlayerCard[] = [
   },
   {
     name: 'Lucino',
-    number: 14,
+    number: 13,
     image:
       'https://noclaf-projects-storage.s3-sa-east-1.amazonaws.com/media/profile_image/92e88a3a-e224-436c-b896-030a10aa8c84.png',
     size: 'HIGH', // LOW | MEDIUM | HIGH
