@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "boilerplate-web": {
+    "dev-league-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -34,7 +34,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/boilerplate-web",
+            "outputPath": "dist/dev-league-web",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -100,10 +100,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "boilerplate-web:build:production"
+              "buildTarget": "dev-league-web:build:production"
             },
             "development": {
-              "buildTarget": "boilerplate-web:build:development"
+              "buildTarget": "dev-league-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -111,7 +111,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "boilerplate-web:build"
+            "buildTarget": "dev-league-web:build"
           }
         },
         "test": {

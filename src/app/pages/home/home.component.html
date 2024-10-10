@@ -1,57 +1,11 @@
 <main class="page">
   <div class="container">
-    <h1>Boilerplate Web Angular</h1>
+    <h1> Dev League</h1>
 
-    <h2>PrimeNG</h2>
-    <div class="flex-column flex gap-2 sm:flex-row">
-      <a
-        pButton
-        href="https://primeng.org/autocomplete"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Componentes
-      </a>
-
-      <a
-        pButton
-        href="https://tailwindui.com/components"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Blocos de código
-      </a>
-
-      <a
-        pButton
-        href="https://tailwindcss.com/docs/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Utilitário CSS
-      </a>
-    </div>
-
-    <h2 class="mt-6">Roadmap </h2>
-    @for (item of items; track item.title; let idx = $index) {
-      <div
-        class="mb-4 flex items-center rounded-lg border border-solid border-slate-500"
-      >
-        <div class="p-4">
-          <p-checkbox
-            inputId="check-{{ idx }}"
-            binary
-            [formControl]="checkedItems.at(idx)"
-          />
-        </div>
-        <div class="p-1">
-          <label for="check-{{ idx }}">
-            <strong>{{ item.title }}</strong> <br />
-            <span [innerHTML]="item.description"></span>
-          </label>
-        </div>
-      </div>
-    }
-    <button pButton (click)="resetRoadmap()"> Redefinir </button>
+    <section class="flex gap-4">
+      @for (card of player_cards; track $index) {
+        <app-player-cards [player]="card" class="max-w-72" />
+      }
+    </section>
   </div>
 </main>

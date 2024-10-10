@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate-web",
+  "name": "dev-league-web",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -20,7 +20,7 @@
     "release:ma": "standard-version --release-as major && npm run post-release",
     "release:mi": "standard-version --release-as minor && npm run post-release",
     "release:p": "standard-version --release-as patch && npm run post-release",
-    "serve:ssr:boilerplate-web": "node dist/boilerplate-web/server/server.mjs"
+    "serve:ssr:dev-league-web": "node dist/dev-league-web/server/server.mjs"
   },
   "private": true,
   "dependencies": {

@@ -1,13 +1,13 @@
-<p-menubar [model]="items" class="sticky z-10 top-0">
+<p-menubar class="sticky top-0 z-10">
   <ng-template pTemplate="start">
-    <figure class="h-12 m-0 mr-3">
+    <figure class="m-0 mr-3 h-12">
       <img src="../../../assets/images/logo.png" alt="Logo" class="h-full" />
     </figure>
   </ng-template>
   <ng-template pTemplate="item" let-item let-root="root">
     <a
       pRipple
-      class="flex align-items-center p-menuitem-link"
+      class="align-items-center p-menuitem-link flex"
       [routerLink]="item.routerLink"
     >
       <i [icon]="item.icon"></i>
@@ -20,7 +20,7 @@
       }
       @if (item.shortcut) {
         <span
-          class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1"
+          class="border-1 surface-border border-round surface-100 ml-auto p-1 text-xs"
           >{{ item.shortcut }}</span
         >
       }
@@ -36,17 +36,6 @@
     <div class="flex items-center gap-2">
       <toggle-theme />
       <app-lang-select />
-      <input
-        type="text"
-        pInputText
-        placeholder="Search"
-        class="w-32 sm:w-auto"
-      />
-      <p-avatar
-        routerLink="/login"
-        image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
-        shape="circle"
-      />
     </div>
   </ng-template>
 </p-menubar>

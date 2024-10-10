@@ -27,3 +27,27 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+.p-rating .p-rating-item .p-rating-icon {
+  color: #f5c738;
+  opacity: 0.5;
+}
+
+.p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+  color: #f5c738;
+  opacity: 1;
+}
+
+.playerCard {
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: 70%;
+    background-color: #151515;
+    clip-path: polygon(0 52%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+}

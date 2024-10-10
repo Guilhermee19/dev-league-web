@@ -1,6 +1,6 @@
 {
-  "name": "boilerplate-web",
-  "short_name": "boilerplate-web",
+  "name": "dev-league-web",
+  "short_name": "dev-league-web",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
